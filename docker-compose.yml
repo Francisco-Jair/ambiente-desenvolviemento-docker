@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  python_dev:
+    build: .
+    command: python -m http.server 8080
+    ports:
+      - 8080:8080
+    working_dir: /root
+    volumes:
+      - ./:/root
